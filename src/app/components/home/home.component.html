@@ -1,10 +1,14 @@
 <!-- Task Form -->
-<div *ngFor="let task of tasks" class="task-container">
-    <h3>{{ task.title }}</h3>
-    <p>{{ task.description }}</p>
-    <button class="btn btn-primary" (click)="editTask(task)">Edit</button>
-    <button class="btn btn-danger" (click)="deleteTask(task.id)">Delete</button>
-</div>
+
+<div *ngFor="let task of tasks" class="card task-container">
+    <div class="card-body">
+      <h3 class="card-title">{{ task.title }}</h3>
+      <p class="card-text">{{ task.description }}</p>
+      <button class="btn btn-primary" (click)="editTask(task)">Edit</button>
+      <button class="btn btn-danger" (click)="deleteTask(task.id)">Delete</button>
+    </div>
+  </div>
+  
 
 <!-- Edit and Update form -->
 <ng-container *ngIf="showEditForm">

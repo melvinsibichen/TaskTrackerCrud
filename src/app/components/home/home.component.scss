@@ -1,12 +1,37 @@
-.task-container {
+.card.task-container {
     margin-bottom: 20px;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    transition: border 0.3s ease;
 
-    h3 {
-        color: #007bff;
+    &:hover {
+        border-color: #2980b9;
     }
 
-    button {
+    .card-body {
+        background-color: #ecf0f1;
+    }
+
+    .card-title {
+        color: #2c3e50;
+    }
+
+    .card-text {
+        color: #34495e;
+    }
+
+    .btn {
         margin-right: 10px;
+    }
+
+    .btn-primary {
+        background-color: #3498db;
+        border-color: #3498db;
+    }
+
+    .btn-danger {
+        background-color: #e74c3c;
+        border-color: #e74c3c;
     }
 }
 
@@ -17,11 +42,24 @@
     label {
         display: block;
         margin-bottom: 8px;
-        color: #007bff;
+        color: #3498db;
     }
 
     input,
     textarea {
         margin-bottom: 16px;
+        border: 1px solid #3498db;
+        border-radius: 4px;
+        padding: 8px;
+    }
+
+    .btn-success {
+        background-color: #2ecc71;
+        border-color: #2ecc71;
+    }
+
+    .btn-secondary {
+        background-color: #95a5a6;
+        border-color: #95a5a6;
     }
 }
