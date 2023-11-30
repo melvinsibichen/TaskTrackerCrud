@@ -1,0 +1,22 @@
+<!-- Task Form -->
+<div *ngFor="let task of tasks" class="task-container">
+    <h3>{{ task.title }}</h3>
+    <p>{{ task.description }}</p>
+    <button class="btn btn-primary" (click)="editTask(task)">Edit</button>
+    <button class="btn btn-danger" (click)="deleteTask(task.id)">Delete</button>
+</div>
+
+<!-- Edit and Update form -->
+<ng-container *ngIf="showEditForm">
+    <div class="edit-form-container">
+        <label for="editTitle">Title:</label>
+        <input id="editTitle" [(ngModel)]="editedTask.title" name="editTitle" required class="form-control">
+
+        <label for="editDescription">Description:</label>
+        <textarea id="editDescription" [(ngModel)]="editedTask.description" name="editDescription" required
+            class="form-control"></textarea>
+
+        <button class="btn btn-success" (click)="saveChanges()">Save Changes</button>
+        <button class="btn btn-secondary" (click)="cancelEdit()">Cancel</button>
+    </div>
+</ng-container>

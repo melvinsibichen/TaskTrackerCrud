@@ -1,0 +1,27 @@
+.task-container {
+    margin-bottom: 20px;
+
+    h3 {
+        color: #007bff;
+    }
+
+    button {
+        margin-right: 10px;
+    }
+}
+
+.edit-form-container {
+    max-width: 400px;
+    margin: 20px 0;
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: #007bff;
+    }
+
+    input,
+    textarea {
+        margin-bottom: 16px;
+    }
+}
